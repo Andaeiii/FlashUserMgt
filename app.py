@@ -1,3 +1,4 @@
+# this is using flask-user
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -16,6 +17,11 @@ app.config['USER_ENABLE_EMAIL'] = False
 
 # create db for application ...
 db = SQLAlchemy(app)
+
+
+print(os.path.dirname(flask_user.__file__))
+
+# quit()
 
 
 class User(db.Model, UserMixin):        # create table...
